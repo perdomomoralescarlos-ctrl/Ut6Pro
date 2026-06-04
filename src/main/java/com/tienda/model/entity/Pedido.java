@@ -1,4 +1,4 @@
-package com.example.tienda.model.entity;
+package com.tienda.model.entity;
 
 import java.time.LocalDate;
 import java.util.HashSet;
@@ -15,10 +15,7 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
-/**
- * Entidad Pedido
- * Representa un pedido realizado por un cliente
- */
+// Entidad Pedido
 @Entity
 @Table(name = "pedidos")
 public class Pedido {
@@ -39,12 +36,12 @@ public class Pedido {
     @Column(length = 500)
     private String observaciones;
 
-    // Relacion: muchos pedidos pertenecen a un cliente
+    // Relacion con cliente
     @ManyToOne
     @JoinColumn(name = "cliente_id", nullable = false)
     private Cliente cliente;
 
-    // Relacion: un pedido puede tener varios videojuegos
+    // Relacion con videojuegos
     @ManyToMany
     @JoinTable(
         name = "pedidos_videojuegos",

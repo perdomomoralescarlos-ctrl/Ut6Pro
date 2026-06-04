@@ -1,4 +1,4 @@
-package com.example.tienda.model.entity;
+package com.tienda.model.entity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,10 +14,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
-/**
- * Entidad Cliente
- * Representa un cliente de la tienda con sus datos personales
- */
+// Entidad Cliente
 @Entity
 @Table(name = "clientes")
 public class Cliente {
@@ -38,7 +35,7 @@ public class Cliente {
     @Column(length = 200)
     private String direccion;
 
-    // Relacion: un cliente tiene muchos pedidos
+    // Relacion con pedidos
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
     @JsonIgnore
     private List<Pedido> pedidos = new ArrayList<>();

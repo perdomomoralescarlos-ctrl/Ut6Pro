@@ -53,3 +53,16 @@ Trabajo de la unidad ut6 realizado por Aythami Reyes y Carlos Perdomo.
 ## Base de datos
 
 ## Tecnologías utilizadas
+
+
+
+## Cómo ejecutar
+
+```bash
+# Compilar y ejecutar
+mvn spring-boot:run
+
+# O compilar JAR
+mvn clean package
+java -jar target/tienda-api-1.0.0.jar
+```
