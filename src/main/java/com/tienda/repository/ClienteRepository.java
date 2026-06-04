@@ -1,6 +1,6 @@
-package com.example.tienda.repository;
+package com.tienda.repository;
 
-import com.example.tienda.model.entity.Cliente;
+import com.tienda.model.entity.Cliente;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

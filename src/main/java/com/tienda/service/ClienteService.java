@@ -1,7 +1,7 @@
-package com.example.tienda.service;
+package com.tienda.service;
 
-import com.example.tienda.model.entity.Cliente;
-import com.example.tienda.repository.ClienteRepository;
+import com.tienda.model.entity.Cliente;
+import com.tienda.repository.ClienteRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

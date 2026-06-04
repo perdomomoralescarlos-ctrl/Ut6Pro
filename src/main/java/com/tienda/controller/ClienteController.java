@@ -1,7 +1,7 @@
-package com.example.tienda.controller;
+package com.tienda.controller;
 
-import com.example.tienda.model.entity.Cliente;
-import com.example.tienda.service.ClienteService;
+import com.tienda.model.entity.Cliente;
+import com.tienda.service.ClienteService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

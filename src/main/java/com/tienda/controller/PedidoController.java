@@ -1,4 +1,4 @@
-package com.example.tienda.controller;
+package com.tienda.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.tienda.model.entity.Pedido;
-import com.example.tienda.service.PedidoService;
+import com.tienda.model.entity.Pedido;
+import com.tienda.service.PedidoService;
 
 // Controller de Pedidos
 @RestController

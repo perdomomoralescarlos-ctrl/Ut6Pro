@@ -1,14 +1,14 @@
-package com.example.tienda.service;
+package com.tienda.service;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.example.tienda.model.entity.Pedido;
-import com.example.tienda.model.entity.Videojuego;
-import com.example.tienda.repository.PedidoRepository;
-import com.example.tienda.repository.VideojuegoRepository;
+import com.tienda.model.entity.Pedido;
+import com.tienda.model.entity.Videojuego;
+import com.tienda.repository.PedidoRepository;
+import com.tienda.repository.VideojuegoRepository;
 
 // Service de Pedidos
 @Service
