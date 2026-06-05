@@ -19,7 +19,7 @@ public class ClienteController {
         this.clienteService = clienteService;
     }
     
-    // CRUD Básico
+    // CRUD
     
     @GetMapping
     public List<Cliente> getAllClientes() {
@@ -58,7 +58,7 @@ public class ClienteController {
         return ResponseEntity.noContent().build();
     }
     
-    // Métodos derivados Módulo B
+    // Métodos derivados (Módulo B)
     
     @GetMapping("/buscar")
     public List<Cliente> buscarPorNombre(@RequestParam String nombre) {

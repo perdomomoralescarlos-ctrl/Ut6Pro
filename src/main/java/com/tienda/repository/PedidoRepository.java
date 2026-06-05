@@ -9,10 +9,13 @@ import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 // Repository de Pedidos
 @Repository
 public interface PedidoRepository extends JpaRepository<Pedido, Long> {
+    
+    // Metodos basicos
     
     // Buscar pedidos por cliente (usa la FK cliente_id)
     List<Pedido> findByClienteId(Long clienteId);
@@ -20,14 +23,19 @@ public interface PedidoRepository extends JpaRepository<Pedido, Long> {
     // Buscar pedidos por cliente ordenados por fecha descendente
     List<Pedido> findByClienteId(Long clienteId, Sort sort);
     
+    // Busquedas
+    
     // Buscar pedidos por estado
     List<Pedido> findByEstadoIgnoreCase(String estado);
     
     // Buscar pedidos por rango de fechas
     List<Pedido> findByFechaBetween(LocalDate fechaInicio, LocalDate fechaFin);
     
-    // Buscar pedidos por estado y rango de fechas
+    // Buscar pedidos por estado y rango de fechas (Módulo B compuesto)
+    
     List<Pedido> findByEstadoIgnoreCaseAndFechaBetween(String estado, LocalDate inicio, LocalDate fin);
+    
+    // Consultas JPQL
     
     // Buscar pedidos que tienen un videojuego
     @Query("SELECT p FROM Pedido p JOIN p.videojuegos v WHERE v.id = :videojuegoId")
